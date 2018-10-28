@@ -3,8 +3,8 @@ package WebService;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Entity //Tells that POI.java is an entry to the table poi in DB
-@Table(name = "poi")
+@Entity //Tells Hibernate that POI.java is an entry to the table 'poi' in DB
+@Table(name = "poi") //poi as of Point of Interest
 public class POI {
 
     @Id
@@ -15,6 +15,8 @@ public class POI {
     private BigDecimal lng;
     private int Tour;
     private int name_id;
+
+    public POI(){}
     
     public POI(int id,BigDecimal lat,BigDecimal lng, int Tour,int name_id)
     {
