@@ -15,6 +15,7 @@
         <version>2.0.5.RELEASE</version>
     </parent>
 
+    <!-- Dependencies  -->
     <dependencies>
         <!-- Spring Boot Dependency  -->
         <dependency>
@@ -33,12 +34,15 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
     </dependencies>
 
+    <!-- Properties -->
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
+    <!-- Build  -->
     <build>
         <plugins>
             <plugin>
