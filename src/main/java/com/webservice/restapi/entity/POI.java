@@ -1,7 +1,4 @@
-package WebService.Model;
-
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
+package com.webservice.restapi.entity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -12,27 +9,26 @@ import java.math.BigDecimal;
  public class POI {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private BigDecimal lat;
     private BigDecimal lng;
     private String tour_description;
-    private int TourID;
+    private int tourid;
 
-    @OneToOne(fetch = FetchType.LAZY,optional = false)
-    @Fetch(FetchMode.JOIN)
-    @JoinColumn(name="Tour",nullable = false)
+    @OneToOne
+    @JoinColumn(name="Tour")
     private TourName tourName;
 
     public POI(){}
     
-    public POI(int id, BigDecimal lat, BigDecimal lng, String tour_description, int TourID, TourName tourName)
+    public POI(int id, BigDecimal lat, BigDecimal lng, String tour_description, int tourid, TourName tourName)
     {
         this.setId(id);
         this.setLat(lat);
         this.setLng(lng);
         this.setTourDescription(tour_description);
-        this.setTourID(TourID);
+        this.setTourid(tourid);
         this.setTourName(tourName);
     }
 
@@ -54,7 +50,7 @@ import java.math.BigDecimal;
         this.tour_description =tour_description;
     }
 
-    private void setTourID(int TourID){ this.TourID=TourID;}
+    private void setTourid(int tourid){ this.tourid =tourid;}
 
     private void setTourName(TourName tourName){this.tourName=tourName;}
 
@@ -75,7 +71,7 @@ import java.math.BigDecimal;
         return tour_description;
     }
 
-    public int getTourID() { return TourID;}
+    public int getTourid() { return tourid;}
 
     public TourName getTourName() {return tourName;}
 }
