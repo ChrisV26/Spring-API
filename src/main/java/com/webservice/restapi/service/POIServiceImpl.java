@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+/** Implementing the Methods from POIService */
+
+@Service // stereotype for service layer,same with component annotation
 public class POIServiceImpl implements POIService {
 
     @Autowired
