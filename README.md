@@ -1,4 +1,4 @@
-# Spring-REST-API
-Implementing REST API using Spring(Boot,JPA),-Java-MySQL
-
-This API serves as a backend to my TourGuide Android App.
+## REST API made with Spring Boot
+  
+- This API serves as a backend to my Tour Guide Android App.
+  - See [Tour Guide](https://github.com/ChrisV26/Tour-Guide) Repository
