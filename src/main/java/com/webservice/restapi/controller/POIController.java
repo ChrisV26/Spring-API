@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@RestController // This means that this class is a Controller
+@RestController 
 public class POIController
 {
 
